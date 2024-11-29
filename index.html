@@ -3,8 +3,7 @@
 <head>
     <meta charset="UFT-8"/>
     <meta http-equiv="X-UA-Compatible" contect="IE=edge"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>    
 <style>
 body{
     margin-top: 3rem;
@@ -62,6 +61,7 @@ iframe{
     color: gray;
 }
 #fullscreenButton{
+    margin-top: 5vh;
     background:gray;
     color:black;
     opacity:0.5;
@@ -86,20 +86,17 @@ li:hover{-webkit-animation:rotate-scale-up-ver .65s linear both;animation:rotate
          
 </head>    
 <body>  
-             <center>
-                      
+     <div class="All">
+         <div class="A">
+             <center>                     
  <details open>
    <summary id="sum">🔴 UNIVERSAL</summary><br/>
- 
-            <center>
-        <div>
-        
- <iframe src="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8" style="width:100%; aspect-ration:16/9" frameborder="0" allowfullscreen="true" allow="encrypted-media" scrolling="true" name="WILLOW"></iframe>
- 
-     </div><br/>
- 
-           <div class="links">   
-
+             <div>        
+ <iframe src="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8" style="width:100%; aspect-ration:16/9" frameborder="0" allowfullscreen="true" allow="encrypted-media" scrolling="true" name="WILLOW"></iframe> 
+     </div><br/></div>
+  
+           <div class="A">
+        <div class="links">   
         <div class="div"><br/>
 <b><li id="OO"><a href="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8" style="color: #4f9; background-color: black" target="WILLOW">UNIVERSAL</a></li>                                                                    
 
@@ -146,18 +143,23 @@ li:hover{-webkit-animation:rotate-scale-up-ver .65s linear both;animation:rotate
  <li id="UU"><a href="https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8" style="color: fuchsia; background-color: black" target="WILLOW">EL HORMIGUERO</a></li>   
          <br/>         
         </div>
-  </details><br/><br/>  
-  
-            <center>
+  </details><br/><br/>              
+          </div> 
+  </center>
+        <center>
+          <div class="A">  
         <button id="fullscreenButton">Pantalla Completa</button><br/><br/>
   
+        <div id="Letter"> 
   <i id="opaco">Este servicio de canales gratuitos no necesita un modelo de suscripción, ni contiene anuncios ni publicidad.</i><br/>
-    
+           
     <i id="opaco">"20 Canales Liberados"</i><br/><br/><br/><br/>
 
    <h2 id="opaco">°LA MOVIE PROPERTY°</h2>
-           </center>
- 
+        </div>
+            </div>
+             </center>
+               </div> 
 <script>
 var fullscreenButton = document.querySelector('#fullscreenButton');
 var iframe = document.querySelector('iframe');
@@ -241,6 +243,159 @@ fullscreenButton.addEventListener('click', function() {
        sum.textContent = '🔴 EL HORMIGUERO';
    };
 </script> 
+
+       <!-- HORIZONTAL -->
+<script>
+        function handleOrientationChange() {
+            var orientation = (window.innerWidth > window.innerHeight) ? "Horizontal" : "Vertical";
+            
+ document.textContent = `Orientación actual: ${orientation}`;
+            
+            if (orientation === "Horizontal") {
+       <!-- Ejecuta el evento -->
+          evento();           
+  } else {
+      invento();
+  }
+}
+
+        function evento() {
+    var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+.links{
+    position: relative;
+    top: -10vh;
+    display: flex;    
+    gap:5px;
+    align-items: stretch;  
+    justify-content: center;
+    scale: 80%;
+}
+.div{
+    background: black;
+    color: fuchsia;
+    scale: 90%;
+    width: 80%;
+    margin-top: -5vh;
+    height: 200px;
+    border: .5px solid gray;
+    border-radius: 20px;
+    text-align: center; 
+    font-size: 25px;  
+    overflow: scroll;
+    box-shadow: 0 0 20px fuchsia;
+}
+iframe{
+    scale: 118%;
+    position: relative;
+    top: -5vh;
+    left: 10vh;
+    box-shadow: 0 0 30px fuchsia;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinuR3l58e9MiWP_hDFssCF5NqAMMhF-rPxTJychbQR8ViB2Y2msjtuYetE3Apf43IQe_mqNG5_8I-HKQbkf-GvRtenXE5fDLEH8kn0wmvBX7MBwtFIvHusDIsB14x1XdAYcay-AqPgXamUKOYE2JVKUEkO1if0bBhsYrpZL1qbpqw5UDhNubuehQzMgng/s498/image_downloader_1700646861820.gif);
+}
+#sum{
+    position: relative;
+    top: -10vh;
+    left: 10vh;
+    background: #600060;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    border-radius:50px;
+    width:50%;
+    border: 2px solid #000080;
+}
+#fullscreenButton{
+    position: relative;
+    left: 0vh;
+    top: 8vh;
+    background:gray;
+    color:black;
+    opacity:0.5;
+    font-weight:bold;
+    font-size:15px;
+    padding:1px;
+    border-radius:50px;
+}
+.All {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20vh;  
+}
+.A {
+    width: 100%;
+    height: 100px; 
+}
+#Letter {
+    position: relative;
+    left: -10vh;
+    top: -10vh;
+    scale: 60%;
+    width:120%;
+}
+</style>     
+`;        document.head.appendChild(style);
+} 
+
+      function invento() {
+   var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+.links{
+    position: relative;
+    top: -10vh;
+    scale: 80%;
+}
+.div{
+    scale: 90%;
+    width: 80%;
+    margin-top: -5vh;
+    height: 200px;
+}
+iframe{
+    scale: 100%;
+    position: relative;
+    top: -5vh;
+    left: 0vh;
+}
+#sum{
+    position: relative;
+    top: -5vh;
+    left: 0vh;
+}
+#fullscreenButton{
+    position: relative;
+    left: 0vh;
+    top: 2vh;
+}
+#Modal {
+  top: 8vh;
+  left: 0vh;
+  width: 100%;
+  height: 28%;  
+  z-index: 9999;
+  position: fixed;
+  background: transparent;
+}
+#Letter {
+    position: relative;
+    left: 0vh;
+    top: 0vh;
+    scale: 100%;
+}
+</style>   
+`;        document.head.appendChild(style);
+}
+       
+ window.addEventListener("resize", handleOrientationChange);
+
+  <!-- Llama a la función al cargar la página para establecer el estado inicial -->
+      handleOrientationChange();
+</script>       
 </body>
 </html> 
        
