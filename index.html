@@ -338,12 +338,40 @@ iframe{
 <script>
   var Div = document.querySelector('.Div'); 
   
-Div.onclick = function(event) {
+Div.onclick = (event) =>{
   if (event.target.tagName === 'A') {
     Sum.textContent = '🔴' + event.target.textContent; 
   }
 };
 </script> 
+
+       <!-- WINDOWS PC -->
+<script>
+  window.onload = function() {
+       if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+#Modal {
+    display: none;
+}
+.Div::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+.Div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #80808080;
+}
+.Div::-webkit-scrollbar-track {
+    background: transparent; 
+}
+</style>     
+`;        document.head.appendChild(style);
+  }
+};
+</script>
 </body>
 </html> 
        
